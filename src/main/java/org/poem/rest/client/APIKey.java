@@ -8,4 +8,6 @@ public class APIKey {
     public String msg;
     public String api_key;
     public String email;
+    public String var_name;
+    public String code;
 }

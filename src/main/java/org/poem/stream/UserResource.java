@@ -1,23 +1,18 @@
 package org.poem.stream;
 
-import org.poem.rest.client.CountriesService;
-import org.poem.rest.client.APIKey;
-import org.poem.rest.client.MyException;
-import org.poem.rest.client.formdata.APIKeyFormData;
-import org.eclipse.microprofile.rest.client.inject.RestClient;
-import org.jboss.resteasy.reactive.ClientWebApplicationException;
-import org.jboss.resteasy.reactive.RestHeader;
-
 import io.smallrye.common.annotation.Blocking;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
+import org.poem.rest.client.CountriesService;
+import org.poem.rest.client.formdata.APIKeyFormData;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+import org.jboss.resteasy.reactive.ClientWebApplicationException;
+import org.jboss.resteasy.reactive.RestHeader;
 @Path("/api/v1")
 public class UserResource {
     @Inject

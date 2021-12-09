@@ -1,8 +1,5 @@
 package org.poem.stream;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.inject.Inject;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -19,12 +16,9 @@ import javax.ws.rs.core.Response;
 import io.smallrye.common.annotation.Blocking;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
-import org.hibernate.annotations.GeneratorType;
-import org.jboss.resteasy.reactive.MultipartForm;
 import org.jboss.resteasy.reactive.ClientWebApplicationException;
 import org.jboss.resteasy.reactive.RestHeader;
 import org.poem.rest.client.StreamService;
-import org.poem.rest.client.formdata.UploadFileFormData;
 
 @Path("/api/v1")
 public class StreamResource {    

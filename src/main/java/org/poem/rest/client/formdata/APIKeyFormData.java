@@ -3,8 +3,6 @@ package org.poem.rest.client.formdata;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.core.MediaType;
 
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
 import org.jboss.resteasy.reactive.PartType;
 
 // @JsonPropertyOrder({"email"})

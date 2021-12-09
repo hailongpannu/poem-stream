@@ -1,15 +1,10 @@
 package org.poem.stream;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.inject.Inject;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -19,12 +14,9 @@ import javax.ws.rs.core.Response;
 import io.smallrye.common.annotation.Blocking;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
-import org.hibernate.annotations.GeneratorType;
-import org.jboss.resteasy.reactive.MultipartForm;
 import org.jboss.resteasy.reactive.ClientWebApplicationException;
 import org.jboss.resteasy.reactive.RestHeader;
 import org.poem.rest.client.DraftService;
-import org.poem.rest.client.formdata.UploadFileFormData;
 
 @Path("/api/v1")
 public class DraftResource {    

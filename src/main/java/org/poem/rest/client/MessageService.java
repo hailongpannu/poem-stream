@@ -1,6 +1,5 @@
 package org.poem.rest.client;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;

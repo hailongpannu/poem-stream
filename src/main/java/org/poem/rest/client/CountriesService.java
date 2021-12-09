@@ -1,9 +1,7 @@
 package org.poem.rest.client;
 
-import org.eclipse.microprofile.rest.client.annotation.ClientHeaderParam;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import org.jboss.resteasy.reactive.MultipartForm;
-import org.jboss.resteasy.reactive.RestForm;
 import org.poem.rest.client.formdata.APIKeyFormData;
 
 import javax.ws.rs.Consumes;
@@ -12,13 +10,10 @@ import javax.ws.rs.HeaderParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import java.util.Base64;
-import java.util.Set;
 
 @Path("/v1")
 @RegisterRestClient
@@ -40,6 +35,10 @@ public interface CountriesService {
     @GET
     @Path("/users/{user_id}")
     Response getUser(@PathParam("user_id") String userId, @HeaderParam("Authorization") String headerValue) throws MyException;
+
+    @GET
+    @Path("/users/{email}")
+    Response getUserByEmail(@PathParam("email") String email, @HeaderParam("Authorization") String headerValue) throws MyException;
 
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)

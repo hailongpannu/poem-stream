@@ -77,4 +77,18 @@ public class UserResource {
         }
         return res;
     }
+
+    @GET
+    @Path("/users/{email}")
+    @Blocking
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response getUserByEmail(@PathParam("email") String email, @RestHeader("Authorization") String authHeader) {
+        Response res;
+        try {
+            res = countriesService.getUserByEmail(email, authHeader);
+        } catch(ClientWebApplicationException ex) {
+            res = ex.getResponse();
+        }
+        return res;
+    }
 }
